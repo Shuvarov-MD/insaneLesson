@@ -415,6 +415,7 @@ document.body.addEventListener('click', event => {
 	if (target.matches('#select-cities')) {
 		listDefault.style.display = 'block';
 		listSelect.style.display = 'none';
+		listAutocomplete.style.display = 'none';
 		document.querySelector('.dropdown-lists__list--select .dropdown-lists__col').textContent = '';
 	} else if (target.closest('.close-button')) {
 		selectCities.value = '';
