@@ -244,8 +244,13 @@ if (cookies[1] !== 'RU' && cookies[1] !== 'EN' && cookies[1] !== 'DE') {
 	createResponse().then(response => {
 		document.querySelector('.input-cities').style.display = 'none';
 		createSpinner();
-		const language = prompt('Выберите язык - RU, EN, DE').toUpperCase();
+		let language;
+		do {
+			language = prompt('Выберите язык - RU, EN, DE').toUpperCase();
+		} while (language !== 'RU' && language !== 'EN' && language !== 'DE');
+
 		document.cookie = `lang=${language}; max-age=3600`;
+
 		document.querySelector('.input-cities').style.display = 'none';
 		cookies = document.cookie.split("; ");
 		cookies = cookies[0].split('=');
