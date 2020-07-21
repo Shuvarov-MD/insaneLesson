@@ -125,10 +125,10 @@ const createConstructorCities = data => {
 			listDefault.style.transform = '';
 			listDefault.style.opacity = '';
 			listDefault.style.display = 'block';
-			listSelect.style.display = 'none';
 			listAutocomplete.style.display = 'none';
 			document.querySelector('.dropdown-lists__list--select .dropdown-lists__col').textContent = '';
 			listSelect.style.display = 'block';
+			listSelect.style.transform = '';
 		} else if (target.closest('.close-button')) {
 			selectCities.value = '';
 			listSelect.style.display = 'none';
